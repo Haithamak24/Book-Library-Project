@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
 }
+
 body {
     padding: 0;
     margin: 0;
@@ -11,6 +12,7 @@ body {
     flex-direction: column; 
 }
 
+/* Header Styles */
 header {
     background-image: url('../imgs/nav.png');
     height: 5em;
@@ -37,10 +39,9 @@ header nav ul {
     display: flex;
     list-style: none;
     column-gap: 30px;
-    column-gap: 70px;
 }
 
-header nav ul li a{
+header nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 20px;
@@ -62,6 +63,7 @@ header div.right {
     justify-content: space-between;
     column-gap: 30px;
 }
+
 header div.right .pic {
     display: flex;
     align-items: center;
@@ -75,6 +77,7 @@ header div.right .pic span {
     color: #cc9600;
 }
 
+/* Main Styles */
 main {
     display: flex;
     flex-direction: column;
@@ -83,51 +86,51 @@ main {
     margin: 0;
     padding: 0;
     flex: 1;
-    padding-top: 5em;
+    padding-top: 5em; /* Added top padding to avoid header overlap */
 }
 
-section {
+main section {
     margin: 0;
     padding: 0;
 }
 
+/* First Section Styles */
 main section.first-sec {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 100px;
     background-image: url('../imgs/screen.png');
-    background-size: 100% 100%;
+    background-size: cover; /* Use cover to maintain aspect ratio */
     background-repeat: no-repeat;
     min-height: 100vh;
     width: 100%;
-    margin: 0;
-    padding: 0;
+    padding: 0; /* Remove margin/padding for uniformity */
 }
 
-main section.first-sec div.intoduction{
+main section.first-sec div.introduction {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 30px;
     margin-top: 100px;
 }
-main section.first-sec  h1{
+
+main section.first-sec h1 {
     font-size: 50px;
     font-weight: 700;
     text-align: center;
     margin: 0;
-    padding: 0;
     color: #cc9600;
 }
-main section.first-sec p{
+
+main section.first-sec p {
     font-size: 20px;
     text-align: center;
-    margin: 0;
-    padding: 0;
 }
 
-main section.first-sec .search{
+/* Search Bar Styles */
+main section.first-sec .search {
     border: 1px solid #836003;
     border-radius: 10px;
     padding: 7px;
@@ -138,20 +141,20 @@ main section.first-sec .search{
     font-size: 15px;
 }
 
-main .first-sec .search input{
+main .first-sec .search input {
     width: 100%;
     height: 30px;
     background-color: transparent;
     border: none;
+    color: #f0f0f0; /* Ensure text is readable */
 }
 
-main .first-sec .search input::placeholder{
+main .first-sec .search input::placeholder {
     color: #e1d4b0;
     font-size: 15px;
 }
 
-
-main .first-sec .search button{
+main .first-sec .search button {
     background-color: #4b330b;
     color: rgb(209, 197, 197);
     border: none;
@@ -159,6 +162,7 @@ main .first-sec .search button{
     padding: 5px;
     width: 140px;
     height: 30px;
+    cursor: pointer; /* Pointer cursor for button */
 }
 
 main section.first-sec .search button:hover {
@@ -168,21 +172,20 @@ main section.first-sec .search button:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
 }
 
+/* Second Section Styles */
 main section.second-sec {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #f0f0f0;
-    /* min-height: 10vh; */
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
-main section.second-sec  h2{
+main section.second-sec h2 {
     margin: 0;
     margin-top: 100px;
     font-size: 40px;
@@ -190,47 +193,50 @@ main section.second-sec  h2{
     text-align: center;
     color: black;
 }
-main section.second-sec .picks{
+
+main section.second-sec .picks {
     display: flex;
+    flex-direction: row; /* Change to row for larger screens */
     align-items: center;
     margin-top: 100px;
     color: black;
     column-gap: 60px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
-main .second-sec .picks .fav-book{
+main .second-sec .picks .fav-book {
     display: flex;
     flex-direction: column;
     align-items: center;
     column-gap: 10px;
 }
-main .second-sec .picks .fav-book h4{
+
+main .second-sec .picks .fav-book h4 {
     margin: 0;
     margin-top: 20px;
     font-size: 20px;
     font-weight: 700;
 }
-main .second-sec .picks .fav-book p{
+
+main .second-sec .picks .fav-book p {
     margin: 0;
     margin-top: 8px;
 }
 
-main .second-sec .picks .fav-book div{
-    margin-right: 30px;
-}
-
-main .second-sec .dots{
+main .second-sec .dots {
     display: flex;
     align-items: center;
     column-gap: 15px;
     margin-top: 80px;
 }
 
+/* Third Section Styles */
 main .third-sec {
     background-color: #080404;
     margin-top: 100px;
     padding: 100px 50px 130px 50px;
 }
+
 main .third-sec .container {
     display: flex;
     align-items: center;
@@ -240,41 +246,37 @@ main .third-sec .container {
     width: 100%;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
-main .third-sec .container aside{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: 20px;
-}
-
-main .third-sec .container aside{
+main .third-sec .container aside {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     column-gap: 20px;
 }
 
-main .third-sec .container aside h2{
+/* Aside Header Styles */
+main .third-sec .container aside h2 {
     margin: 0;
     font-size: 40px;
     font-weight: 700;
     color: #ffffff;
 }
 
-main .third-sec .container aside h2 span{
+main .third-sec .container aside h2 span {
     color: #cc9600;
     font-size: 30px;
 }
 
-main .third-sec .container aside p{
+main .third-sec .container aside p {
     margin: 0;
     font-size: 20px;
     color: #ffffff;
 }
 
-main .third-sec .container aside .statistics{
+/* Statistics Styles */
+main .third-sec .container aside .statistics {
     display: flex;
     align-items: center;
     column-gap: 220px;
@@ -282,26 +284,28 @@ main .third-sec .container aside .statistics{
     margin-bottom: 20px;
 }
 
-.third-sec .container aside .statistics .calc{
+.third-sec .container aside .statistics .calc {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 12px;    
 }
-.third-sec .container aside .statistics .calc span{
+
+.third-sec .container aside .statistics .calc span {
     font-size: 20px;
     color: #cc9600;
 }
 
-.third-sec .container aside .statistics .calc span:first-child{
+.third-sec .container aside .statistics .calc span:first-child {
     font-size: 40px;
 }
 
-.third-sec .container aside .statistics .calc span:nth-child(2){
+.third-sec .container aside .statistics .calc span:nth-child(2) {
     font-size: 15px;
 }
 
-.third-sec .container aside a{
+/* Link Styles */
+.third-sec .container aside a {
     background-color: #080404;
     border: 1px solid #cc9600;
     color: rgb(209, 197, 197);
@@ -314,7 +318,6 @@ main .third-sec .container aside .statistics{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; */
     text-decoration: none;
 }
 
@@ -326,25 +329,77 @@ main .third-sec .container aside .statistics{
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
-
+/* Footer Styles */
 footer {
     position: relative;
     background-color: #080404;
     color: #cc9600;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100px;
-    padding-left: 30px;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
 }
 
-footer div {
-    display: flex;
-    align-items: center;
-    column-gap: 50px;
-    width: 100%;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header div.left {
+        font-size: 16px; /* Adjust header font size for smaller screens */
+    }
+
+    main section.first-sec h1 {
+        font-size: 30px; /* Smaller heading size */
+    }
+
+    main section.first-sec p {
+        font-size: 16px; /* Smaller paragraph size */
+    }
+
+    main section.second-sec h2 {
+        font-size: 30px; /* Adjust section title size */
+    }
+
+    main section.second-sec .picks {
+        flex-direction: column; /* Stack picks vertically */
+        align-items: center; /* Center aligns for smaller screens */
+        column-gap: 0; /* Remove gap for column layout */
+    }
+
+    main section.second-sec .picks .fav-book {
+        margin-bottom: 30px; /* Space between books */
+    }
+
+    main .third-sec .container {
+        flex-direction: column; /* Stack container items */
+        align-items: center; /* Center aligns for smaller screens */
+    }
+
+    main .third-sec .container aside .statistics {
+        column-gap: 50px; /* Adjust spacing for smaller screens */
+        flex-direction: column; /* Stack statistics vertically */
+    }
 }
 
-footer div span:first-child {
-    color: #f0f0f0;
+@media (max-width: 480px) {
+    header div.left {
+        font-size: 14px; /* Further adjust header font size */
+    }
+
+    main section.first-sec h1 {
+        font-size: 24px; /* Further adjust heading size */
+    }
+
+    main section.first-sec p {
+        font-size: 14px; /* Further adjust paragraph size */
+    }
+
+    main section.second-sec h2 {
+        font-size: 24px; /* Further adjust section title size */
+    }
+
+    main .third-sec .container aside h2 {
+        font-size: 28px; /* Further adjust aside header size */
+    }
+
+    main .third-sec .container aside p {
+        font-size: 16px; /* Further adjust aside paragraph size */
+    }
 }

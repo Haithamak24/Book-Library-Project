@@ -332,3 +332,19 @@ input[type="checkbox"]:checked + .checkbox-icon {
     line-height: normal;
     letter-spacing: 0.56px;
 }
+
+/* Adjust footer size for screens smaller than 768px */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px; /* Reduce padding */
+        margin-right: 10px; /* Adjust right margin if needed */
+    }
+}
+
+/* Further adjustments for smaller screens */
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px; /* Further reduce padding */
+        margin-right: 100px; /* Further adjust right margin */
+    }
+}
